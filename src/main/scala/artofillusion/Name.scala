@@ -1,0 +1,5 @@
+package artofillusion
+
+trait Name {
+  
+}
