@@ -25,11 +25,12 @@ class Scene extends Logging with ObjectsCollection with ImagesCollection with Ma
     _time = value
   }
 
-  def load(path: String): Unit = {
+  private def load(path: String): Unit = {
     logger.info(s"Loading: $path")
   }
 
   def load(in: DataInputStream): Unit = {
-    
+    logger.info("Loading from stream")
+
   }
 }

@@ -5,10 +5,10 @@ import org.apache.logging.log4j.scala.Logging
 import java.awt.event.{ActionEvent, ActionListener}
 import javax.swing.{JFrame, JMenu, JMenuBar, JMenuItem, WindowConstants}
 
-class Layout(path: String) extends JFrame with Logging {
+class Layout extends JFrame with Logging {
 
   initUI()
-  setTitle("Hello, World!" + path)
+  
   
   private def initUI(): Unit = {
     setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE)
@@ -28,8 +28,14 @@ class Layout(path: String) extends JFrame with Logging {
     jmb.add(new JMenu("Edit"))
     jmb.add(new JMenu("Help"))
     setJMenuBar(jmb)
-  }
 
+  }
+  
+  def this(path: String) = {
+    this()
+    setTitle("Hello, World! " + path)
+  }
+  
   def newAction(event: ActionEvent): Unit = logger.info("New file")
   
   def openSceneAction(event: ActionEvent): Unit = {
