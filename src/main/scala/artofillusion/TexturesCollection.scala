@@ -1,13 +1,13 @@
 package artofillusion
 
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.ArrayBuffer
 import org.apache.logging.log4j.scala.Logging
 
 trait TexturesCollection extends Logging {
   
   this: Scene =>
   
-  private val texturesList: ListBuffer[Texture] = ListBuffer()
+  private val texturesList: ArrayBuffer[Texture] = ArrayBuffer()
 
   def add(texture: Texture): Unit = {
     logger.info(s"Adding texture: $texture")

@@ -7,6 +7,7 @@ libraryDependencies += "org.apache.logging.log4j" %% "log4j-api-scala" % "13.1.0
 
 libraryDependencies += "org.apache.logging.log4j" % "log4j-core" % "2.23.1"
 libraryDependencies += "org.apache.groovy" % "groovy" % "4.0.0"
+
 lazy val root = (project in file("."))
   .settings(
     name := "SAO"

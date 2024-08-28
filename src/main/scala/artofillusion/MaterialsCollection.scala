@@ -1,11 +1,11 @@
 package artofillusion
 
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.ArrayBuffer
 
 trait MaterialsCollection {
   this: Scene =>
 
-  private val materialsList: ListBuffer[Material] = ListBuffer()
+  private val materialsList: ArrayBuffer[Material] = ArrayBuffer()
   
   final def materials: List[Material] = materialsList.toList
 

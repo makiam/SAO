@@ -1,10 +1,10 @@
 package artofillusion
 
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.ArrayBuffer
 
 trait ObjectsCollection {
   this: Scene =>
-  private val objectsList: ListBuffer[SObject] = ListBuffer()
+  private val objectsList: ArrayBuffer[SObject] = ArrayBuffer()
   
   def add(sObject: SObject): Unit = {
     logger.info(s"Adding object: $sObject")
